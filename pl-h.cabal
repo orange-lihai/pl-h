@@ -1,0 +1,61 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 6291d07730da243069dfc43ff65d9920a4e296b6f74a1a93c90491d78bd81d49
+
+name:           pl-h
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/orange.lihai/pl-h#readme>
+homepage:       https://github.com/orange.lihai/pl-h#readme
+bug-reports:    https://github.com/orange.lihai/pl-h/issues
+author:         orange.lihai
+maintainer:     orange.lihai
+copyright:      2018 orange.lihai
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/orange.lihai/pl-h
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_pl_h
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable pl-h-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_pl_h
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , pl-h
+  default-language: Haskell2010
+
+test-suite pl-h-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_pl_h
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , pl-h
+  default-language: Haskell2010
